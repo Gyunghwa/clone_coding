@@ -1,0 +1,83 @@
+body {
+  font-family: "Shippori Antique B1", sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: rgb(49, 49, 49);
+}
+
+a {
+  text-decoration: none;
+  color: beige;
+}
+
+.navbar_logo {
+  font-size: 20px;
+  color: orange;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 12px 8px;
+}
+
+.navbar_menu li:hover {
+  background-color: orange;
+  border-radius: 3px;
+}
+
+.navbar_icons {
+  display: flex;
+  font-size: 20px;
+  color: beige;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar_icons li {
+  padding: 4px 12px;
+}
+
+.navbar_togglebtn {
+  position: absolute;
+  right: 32px;
+  display: none;
+  color: orange;
+  font-size: 20px;
+}
+/* 반응형 만들기 */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar_menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_icons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar_togglebtn {
+    display: inline-block;
+  }
+}
